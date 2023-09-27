@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="menu" class="button">
+        <div id="menu-line-one" class="line one"></div>
+        <div id="menu-line-two" class="line two"></div>
+        <div id="menu-line-three" class="line three"></div>
+    </button>
+    <script>
+        let flag = false;
+        let menu = document.getElementById("menu");
+        let menuLineOne = document.getElementById("menu-line-one");
+        let menuLineTwo = document.getElementById("menu-line-two");
+        let menuLineThree = document.getElementById("menu-line-three");
+
+        menu.addEventListener("click", () => {
+            if(!flag){
+                menuLineOne.classList.add("animacion1");
+                menuLineOne.classList.remove("animacion1out");
+                menuLineTwo.classList.add("animacion2");
+                menuLineTwo.classList.remove("animacion2out");
+                menuLineThree.classList.add("animacion3");
+                menuLineThree.classList.remove("animacion3out");
+                flag = !flag;
+            }else{
+                menuLineOne.classList.remove("animacion1");
+                menuLineOne.classList.add("animacion1out");
+                menuLineTwo.classList.remove("animacion2");
+                menuLineTwo.classList.add("animacion2out");
+                menuLineThree.classList.remove("animacion3");
+                menuLineThree.classList.add("animacion3out");
+                flag = !flag;
+            }
+        })
+    </script>
+</body>
+</html>

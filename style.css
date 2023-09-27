@@ -1,0 +1,83 @@
+.button{
+    width: 5rem;
+    height: 5rem;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.line{
+    height: 10%;
+    width: 80%;
+    background-color: red;
+}
+.animacion1{
+    animation: one 0.5s ease-in-out forwards;
+    transition: all ease-in-out 0.5s forwards;
+    transform: translateY(100%) rotateZ(45deg) 0.5s;
+}
+.animacion1out{
+    animation: oneout 0.5s ease-in-out;
+}
+.animacion3{
+    animation: three 0.5s ease-in-out forwards;
+    transition: all ease-in-out 0.5s forwards;
+    transform: translateY(-325%) rotateZ(-45deg) 0.5s;
+}
+.animacion2{
+    animation: two 0.5s ease-in-out forwards;
+}
+.animacion2out{
+    animation: twoout 0.5s ease-in-out;
+}
+.animacion3out{
+    animation: threeout 0.5s ease-in-out;
+}
+@keyframes one {
+    100%{
+        width: 150%;
+        transform: translateY(325%) rotateZ(45deg);
+    }
+}
+@keyframes oneout {
+    0%{
+        width: 150%;
+        transform: translateY(325%) rotateZ(45deg);
+    }
+    100%{
+        width: 80%;
+        transform: translateY(0) rotateZ(0deg);
+    }
+}
+@keyframes two {
+    100%{
+        opacity: 0%;
+    }
+}
+@keyframes twoout {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes three {
+    100%{
+        width: 150%;
+        transform: translateY(-325%) rotateZ(-45deg);
+    }
+}
+@keyframes threeout {
+    0%{
+        width: 150%;
+        transform: translateY(-325%) rotateZ(-45deg);
+    }
+    100%{
+        width: 80%;
+        transform: translateY(0) rotateZ(0deg);
+    }
+}
